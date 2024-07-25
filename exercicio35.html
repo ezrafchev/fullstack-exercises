@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 35 - Edição de Comentário</title>
+    <script>
+        async function fetchCommentDetails(commentId) {
+            const response = await fetch(`http://localhost:5000/comments/${commentId}`, {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const comment = await response.json();
+            document.getElementById('user').value = comment.user;
+            document.getElementById('text').value = comment.text;
+        }
+
+        async function updateCommentDetails(commentId) {
+            const user = document.getElementById('user').value;
+            const text = document.getElementById('text').value;
+            const response = await fetch(`http://localhost:5000/comments/${commentId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                },
+                body: JSON.stringify({ user, text })
+            });
+            if (response.ok) {
+                alert('Comentário atualizado com sucesso!');
+            } else {
+                alert('Erro ao atualizar comentário.');
+            }
+        }
+
+        window.onload = () => {
+            const commentId = new URLSearchParams(window.location.search).get('id');
+            fetchCommentDetails(commentId);
+            document.getElementById('update-button').onclick = () => updateCommentDetails(commentId);
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Editar Comentário</h1>
+    </header>
+    <main>
+        <form>
+            <label for="user">Usuário:</label>
+            <input type="text" id="user" name="user" required>
+            <br>
+            <label for="text">Comentário:</label>
+            <input type="text" id="text" name="text" required>
+            <br>
+            <button type="button" id="update-button">Atualizar</button>
+        </form>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+

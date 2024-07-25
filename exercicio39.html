@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 39 - Detalhes da Avaliação</title>
+    <script>
+        async function fetchReviewDetails(reviewId) {
+            const response = await fetch(`http://localhost:5000/reviews/${reviewId}`, {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const review = await response.json();
+            document.getElementById('review-user').textContent = `Usuário: ${review.user}`;
+            document.getElementById('review-rating').textContent = `Avaliação: ${review.rating}`;
+            document.getElementById('review-comment').textContent = `Comentário: ${review.comment}`;
+        }
+
+        window.onload = () => {
+            const reviewId = new URLSearchParams(window.location.search).get('id');
+            fetchReviewDetails(reviewId);
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Detalhes da Avaliação</h1>
+    </header>
+    <main>
+        <div>
+            <p id="review-user"></p>
+            <p id="review-rating"></p>
+            <p id="review-comment"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+

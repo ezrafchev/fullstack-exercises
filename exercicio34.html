@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 34 - Detalhes do Comentário</title>
+    <script>
+        async function fetchCommentDetails(commentId) {
+            const response = await fetch(`http://localhost:5000/comments/${commentId}`, {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const comment = await response.json();
+            document.getElementById('comment-user').textContent = `Usuário: ${comment.user}`;
+            document.getElementById('comment-text').textContent = `Comentário: ${comment.text}`;
+        }
+
+        window.onload = () => {
+            const commentId = new URLSearchParams(window.location.search).get('id');
+            fetchCommentDetails(commentId);
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Detalhes do Comentário</h1>
+    </header>
+    <main>
+        <div>
+            <p id="comment-user"></p>
+            <p id="comment-text"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+

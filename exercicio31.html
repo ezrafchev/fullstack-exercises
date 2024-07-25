@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 31 - Listagem de Comentários de Produtos</title>
+    <script>
+        async function fetchComments() {
+            const response = await fetch('http://localhost:5000/comments', {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const comments = await response.json();
+            const commentList = document.getElementById('comment-list');
+            comments.forEach(comment => {
+                const li = document.createElement('li');
+                li.textContent = `Usuário: ${comment.user}, Comentário: ${comment.text}`;
+                commentList.appendChild(li);
+            });
+        }
+
+        window.onload = fetchComments;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Listagem de Comentários de Produtos</h1>
+    </header>
+    <main>
+        <ul id="comment-list"></ul>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+

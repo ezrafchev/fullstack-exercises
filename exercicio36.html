@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 36 - Listagem de Avaliações de Produtos</title>
+    <script>
+        async function fetchReviews() {
+            const response = await fetch('http://localhost:5000/reviews', {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const reviews = await response.json();
+            const reviewList = document.getElementById('review-list');
+            reviews.forEach(review => {
+                const li = document.createElement('li');
+                li.textContent = `Usuário: ${review.user}, Avaliação: ${review.rating}, Comentário: ${review.comment}`;
+                reviewList.appendChild(li);
+            });
+        }
+
+        window.onload = fetchReviews;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Listagem de Avaliações de Produtos</h1>
+    </header>
+    <main>
+        <ul id="review-list"></ul>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+
