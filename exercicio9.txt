@@ -1,0 +1,28 @@
+
+Exercício 9: Manipulação de Objetos em JavaScript
+
+Neste exercício, você aprenderá a manipular objetos em JavaScript. Objetos são coleções de pares chave-valor que podem ser manipuladas de várias maneiras.
+
+Passos:
+1. Crie um objeto que represente um carro com propriedades `marca`, `modelo` e `ano`.
+2. Crie uma função que receba um objeto carro como parâmetro e adicione uma nova propriedade `cor` ao objeto.
+3. Chame a função e exiba o objeto atualizado no console.
+
+Exemplo:
+```javascript
+let carro = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    ano: 2020
+};
+
+function adicionarCor(carro, cor) {
+    carro.cor = cor;
+    return carro;
+}
+
+let carroAtualizado = adicionarCor(carro, "vermelho");
+console.log(carroAtualizado);
+// { marca: 'Toyota', modelo: 'Corolla', ano: 2020, cor: 'vermelho' }
+```
+

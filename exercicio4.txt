@@ -1,0 +1,26 @@
+
+Exercício 4: Laços de Repetição em JavaScript
+
+Neste exercício, você aprenderá a utilizar laços de repetição em JavaScript. Laços permitem que você execute um bloco de código várias vezes.
+
+Passos:
+1. Crie uma função que receba um número como parâmetro.
+2. Utilize um laço `for` para imprimir todos os números de 1 até o número fornecido.
+3. Chame a função e exiba os números no console.
+
+Exemplo:
+```javascript
+function imprimirNumeros(ate) {
+    for (let i = 1; i <= ate; i++) {
+        console.log(i);
+    }
+}
+
+imprimirNumeros(5);
+// 1
+// 2
+// 3
+// 4
+// 5
+```
+

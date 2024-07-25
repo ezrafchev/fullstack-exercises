@@ -1,0 +1,30 @@
+
+Exercício 13: Manipulação de DOM em JavaScript
+
+Neste exercício, você aprenderá a manipular o DOM (Document Object Model) em JavaScript. O DOM é uma interface de programação que permite a manipulação de documentos HTML e XML.
+
+Passos:
+1. Crie um arquivo HTML com um elemento `<div>` com o id `conteudo`.
+2. Crie um arquivo JavaScript que selecione o elemento `<div>` pelo id.
+3. Altere o conteúdo do elemento `<div>` para "Olá, DOM!".
+
+Exemplo:
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de DOM</title>
+</head>
+<body>
+    <div id="conteudo"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+```javascript
+document.getElementById("conteudo").innerText = "Olá, DOM!";
+```
+

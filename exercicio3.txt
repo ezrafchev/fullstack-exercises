@@ -1,0 +1,25 @@
+
+Exercício 3: Condicionais em JavaScript
+
+Neste exercício, você aprenderá a utilizar condicionais em JavaScript. Condicionais permitem que você execute diferentes blocos de código com base em certas condições.
+
+Passos:
+1. Crie uma função que receba um número como parâmetro.
+2. Dentro da função, utilize uma estrutura condicional para verificar se o número é par ou ímpar.
+3. Retorne uma mensagem indicando se o número é par ou ímpar.
+4. Chame a função e exiba o resultado no console.
+
+Exemplo:
+```javascript
+function verificarParidade(numero) {
+    if (numero % 2 === 0) {
+        return "O número é par.";
+    } else {
+        return "O número é ímpar.";
+    }
+}
+
+let resultado = verificarParidade(7);
+console.log(resultado); // O número é ímpar.
+```
+

@@ -1,0 +1,26 @@
+
+Exercício 6: Objetos em JavaScript
+
+Neste exercício, você aprenderá a trabalhar com objetos em JavaScript. Objetos são coleções de pares chave-valor.
+
+Passos:
+1. Crie um objeto que represente uma pessoa com propriedades `nome`, `idade` e `cidade`.
+2. Crie uma função que receba um objeto pessoa como parâmetro e retorne uma string com uma mensagem apresentando a pessoa.
+3. Chame a função e exiba a mensagem no console.
+
+Exemplo:
+```javascript
+let pessoa = {
+    nome: "João",
+    idade: 30,
+    cidade: "São Paulo"
+};
+
+function apresentarPessoa(pessoa) {
+    return `Olá, meu nome é ${pessoa.nome}, tenho ${pessoa.idade} anos e moro em ${pessoa.cidade}.`;
+}
+
+let mensagem = apresentarPessoa(pessoa);
+console.log(mensagem); // Olá, meu nome é João, tenho 30 anos e moro em São Paulo.
+```
+

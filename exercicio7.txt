@@ -1,0 +1,21 @@
+
+Exercício 7: Manipulação de Strings em JavaScript
+
+Neste exercício, você aprenderá a manipular strings em JavaScript. Strings são sequências de caracteres que podem ser manipuladas de várias maneiras.
+
+Passos:
+1. Crie uma função que receba uma string como parâmetro.
+2. Dentro da função, converta a string para maiúsculas.
+3. Retorne a string convertida.
+4. Chame a função e exiba o resultado no console.
+
+Exemplo:
+```javascript
+function converterMaiusculas(texto) {
+    return texto.toUpperCase();
+}
+
+let resultado = converterMaiusculas("Olá, mundo!");
+console.log(resultado); // OLÁ, MUNDO!
+```
+

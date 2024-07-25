@@ -1,0 +1,30 @@
+
+Exercício 18: Manipulação de Atributos em JavaScript
+
+Neste exercício, você aprenderá a manipular atributos de elementos HTML em JavaScript. Você pode adicionar, remover ou alterar atributos de elementos HTML dinamicamente usando JavaScript.
+
+Passos:
+1. Crie um arquivo HTML com um elemento `<img>` com o id `minhaImagem`.
+2. Crie um arquivo JavaScript que selecione o elemento `<img>` pelo id.
+3. Altere o atributo `src` do elemento `<img>` para uma nova URL de imagem.
+
+Exemplo:
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Atributos</title>
+</head>
+<body>
+    <img id="minhaImagem" src="imagem1.jpg" alt="Imagem de exemplo">
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+```javascript
+document.getElementById("minhaImagem").setAttribute("src", "imagem2.jpg");
+```
+

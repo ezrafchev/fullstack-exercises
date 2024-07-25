@@ -1,0 +1,26 @@
+
+Exercício 5: Arrays em JavaScript
+
+Neste exercício, você aprenderá a trabalhar com arrays em JavaScript. Arrays são listas de elementos que podem ser acessados por um índice.
+
+Passos:
+1. Crie um array com cinco números.
+2. Crie uma função que receba um array como parâmetro e retorne a soma de todos os elementos.
+3. Chame a função e exiba o resultado no console.
+
+Exemplo:
+```javascript
+let numeros = [1, 2, 3, 4, 5];
+
+function somarArray(array) {
+    let soma = 0;
+    for (let i = 0; i < array.length; i++) {
+        soma += array[i];
+    }
+    return soma;
+}
+
+let resultado = somarArray(numeros);
+console.log(resultado); // 15
+```
+

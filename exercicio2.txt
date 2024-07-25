@@ -1,0 +1,19 @@
+
+Exercício 2: Funções em JavaScript
+
+Neste exercício, você aprenderá a criar e utilizar funções em JavaScript. Funções são blocos de código reutilizáveis que podem ser chamados em diferentes partes do seu programa.
+
+Passos:
+1. Crie uma função que receba dois números como parâmetros e retorne a soma deles.
+2. Chame a função e exiba o resultado no console.
+
+Exemplo:
+```javascript
+function somar(a, b) {
+    return a + b;
+}
+
+let resultado = somar(5, 3);
+console.log(resultado); // 8
+```
+

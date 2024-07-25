@@ -1,0 +1,37 @@
+
+Exercício 15: Manipulação de Formulários em JavaScript
+
+Neste exercício, você aprenderá a manipular formulários em JavaScript. Formulários são elementos HTML que permitem a entrada de dados pelo usuário.
+
+Passos:
+1. Crie um arquivo HTML com um formulário contendo um campo de texto e um botão de envio.
+2. Crie um arquivo JavaScript que capture o evento de envio do formulário.
+3. Quando o formulário for enviado, exiba o valor do campo de texto no console.
+
+Exemplo:
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Formulários</title>
+</head>
+<body>
+    <form id="meuFormulario">
+        <input type="text" id="meuCampo" placeholder="Digite algo">
+        <button type="submit">Enviar</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+```javascript
+document.getElementById("meuFormulario").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let valor = document.getElementById("meuCampo").value;
+    console.log("Valor do campo: " + valor);
+});
+```
+

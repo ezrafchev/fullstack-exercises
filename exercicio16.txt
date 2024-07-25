@@ -1,0 +1,31 @@
+
+Exercício 16: Manipulação de Estilos em JavaScript
+
+Neste exercício, você aprenderá a manipular estilos CSS em JavaScript. Você pode alterar a aparência dos elementos HTML dinamicamente usando JavaScript.
+
+Passos:
+1. Crie um arquivo HTML com um elemento `<div>` com o id `meuDiv`.
+2. Crie um arquivo JavaScript que selecione o elemento `<div>` pelo id.
+3. Altere o estilo do elemento `<div>` para ter uma cor de fundo azul e uma cor de texto branca.
+
+Exemplo:
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Estilos</title>
+</head>
+<body>
+    <div id="meuDiv">Texto de exemplo</div>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+```javascript
+document.getElementById("meuDiv").style.backgroundColor = "blue";
+document.getElementById("meuDiv").style.color = "white";
+```
+

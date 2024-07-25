@@ -1,0 +1,32 @@
+
+Exercício 14: Eventos em JavaScript
+
+Neste exercício, você aprenderá a trabalhar com eventos em JavaScript. Eventos são ações ou ocorrências que acontecem no navegador e podem ser capturadas e manipuladas com JavaScript.
+
+Passos:
+1. Crie um arquivo HTML com um botão com o id `meuBotao`.
+2. Crie um arquivo JavaScript que adicione um evento de clique ao botão.
+3. Quando o botão for clicado, exiba uma mensagem no console.
+
+Exemplo:
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em JavaScript</title>
+</head>
+<body>
+    <button id="meuBotao">Clique em mim</button>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+```javascript
+document.getElementById("meuBotao").addEventListener("click", function() {
+    console.log("Botão clicado!");
+});
+```
+

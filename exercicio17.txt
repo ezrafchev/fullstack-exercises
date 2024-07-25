@@ -1,0 +1,38 @@
+
+Exercício 17: Manipulação de Classes em JavaScript
+
+Neste exercício, você aprenderá a manipular classes CSS em JavaScript. Você pode adicionar, remover ou alternar classes de elementos HTML dinamicamente usando JavaScript.
+
+Passos:
+1. Crie um arquivo HTML com um elemento `<div>` com o id `meuDiv`.
+2. Crie um arquivo CSS com uma classe `.destaque` que altera a cor de fundo e a cor do texto do elemento.
+3. Crie um arquivo JavaScript que adicione a classe `.destaque` ao elemento `<div>`.
+
+Exemplo:
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Classes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="meuDiv">Texto de exemplo</div>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+```css
+.destaque {
+    background-color: yellow;
+    color: red;
+}
+```
+
+```javascript
+document.getElementById("meuDiv").classList.add("destaque");
+```
+

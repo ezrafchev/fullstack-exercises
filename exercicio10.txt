@@ -1,0 +1,25 @@
+
+Exercício 10: Funções de Callback em JavaScript
+
+Neste exercício, você aprenderá a utilizar funções de callback em JavaScript. Funções de callback são funções passadas como argumentos para outras funções e são executadas após algum tipo de evento.
+
+Passos:
+1. Crie uma função que receba dois números e uma função de callback como parâmetros.
+2. Dentro da função, chame a função de callback passando a soma dos dois números como argumento.
+3. Crie uma função de callback que exiba o resultado no console.
+4. Chame a função principal passando dois números e a função de callback.
+
+Exemplo:
+```javascript
+function calcular(a, b, callback) {
+    let resultado = a + b;
+    callback(resultado);
+}
+
+function exibirResultado(resultado) {
+    console.log("O resultado é: " + resultado);
+}
+
+calcular(5, 3, exibirResultado); // O resultado é: 8
+```
+

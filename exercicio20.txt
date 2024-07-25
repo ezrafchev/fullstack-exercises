@@ -1,0 +1,32 @@
+
+Exercício 20: Manipulação de Eventos de Teclado em JavaScript
+
+Neste exercício, você aprenderá a manipular eventos de teclado em JavaScript. Você pode capturar eventos de teclado e executar ações com base nas teclas pressionadas.
+
+Passos:
+1. Crie um arquivo HTML com um campo de texto `<input>` com o id `meuInput`.
+2. Crie um arquivo JavaScript que capture o evento de pressionar uma tecla no campo de texto.
+3. Quando uma tecla for pressionada, exiba o valor da tecla no console.
+
+Exemplo:
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Eventos de Teclado</title>
+</head>
+<body>
+    <input type="text" id="meuInput" placeholder="Pressione uma tecla">
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+```javascript
+document.getElementById("meuInput").addEventListener("keydown", function(event) {
+    console.log("Tecla pressionada: " + event.key);
+});
+```
+

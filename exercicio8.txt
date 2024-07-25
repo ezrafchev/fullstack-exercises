@@ -1,0 +1,22 @@
+
+Exercício 8: Manipulação de Arrays em JavaScript
+
+Neste exercício, você aprenderá a manipular arrays em JavaScript. Arrays são listas de elementos que podem ser manipuladas de várias maneiras.
+
+Passos:
+1. Crie um array com cinco números.
+2. Crie uma função que receba um array como parâmetro e retorne um novo array com os elementos em ordem inversa.
+3. Chame a função e exiba o resultado no console.
+
+Exemplo:
+```javascript
+let numeros = [1, 2, 3, 4, 5];
+
+function inverterArray(array) {
+    return array.reverse();
+}
+
+let resultado = inverterArray(numeros);
+console.log(resultado); // [5, 4, 3, 2, 1]
+```
+

@@ -1,0 +1,28 @@
+
+Exercício 12: Async/Await em JavaScript
+
+Neste exercício, você aprenderá a utilizar `async` e `await` em JavaScript. `async` e `await` são sintaxes que facilitam o trabalho com Promises.
+
+Passos:
+1. Crie uma função assíncrona que utilize `await` para esperar a resolução de uma Promise.
+2. Dentro da função, utilize `setTimeout` para simular uma operação assíncrona que resolve a Promise após 2 segundos.
+3. Chame a função e exiba o resultado no console.
+
+Exemplo:
+```javascript
+function operacaoAssincrona() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Operação concluída com sucesso!");
+        }, 2000);
+    });
+}
+
+async function executarOperacao() {
+    let mensagem = await operacaoAssincrona();
+    console.log(mensagem); // Operação concluída com sucesso!
+}
+
+executarOperacao();
+```
+
