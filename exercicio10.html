@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10 - Listagem de Usuários</title>
+    <script>
+        async function fetchUsers() {
+            const response = await fetch('http://localhost:5000/users', {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const users = await response.json();
+            const userList = document.getElementById('user-list');
+            users.forEach(user => {
+                const li = document.createElement('li');
+                li.textContent = `Nome: ${user.name}, Email: ${user.email}`;
+                userList.appendChild(li);
+            });
+        }
+        window.onload = fetchUsers;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Listagem de Usuários</h1>
+    </header>
+    <main>
+        <ul id="user-list"></ul>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+
