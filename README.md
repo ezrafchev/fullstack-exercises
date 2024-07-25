@@ -106,3 +106,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou env
 
 Este projeto está licenciado sob a Licença MIT.
 
+Feito com ❤️ por [Ezra Fchev](https://github.com/ezrafchev)
