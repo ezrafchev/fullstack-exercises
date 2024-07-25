@@ -1,0 +1,29 @@
+
+Exercício 37: Manipulação de Arrays de Objetos com Funções de Alta Ordem em JavaScript
+
+Neste exercício, você aprenderá a utilizar funções de alta ordem em arrays de objetos em JavaScript. Funções de alta ordem são funções que recebem outras funções como argumentos ou retornam funções como resultado.
+
+Passos:
+1. Crie um array de objetos, onde cada objeto representa um estudante com propriedades `nome` e `nota`.
+2. Utilize o método `map` para criar um novo array com apenas os nomes dos estudantes.
+3. Utilize o método `filter` para criar um novo array com apenas os estudantes que têm nota maior que 7.
+4. Utilize o método `reduce` para calcular a média das notas dos estudantes.
+
+Exemplo:
+```javascript
+let estudantes = [
+    { nome: "João", nota: 6 },
+    { nome: "Maria", nota: 8 },
+    { nome: "Pedro", nota: 9 }
+];
+
+let nomes = estudantes.map(estudante => estudante.nome);
+console.log(nomes); // ["João", "Maria", "Pedro"]
+
+let aprovados = estudantes.filter(estudante => estudante.nota > 7);
+console.log(aprovados); // [{ nome: "Maria", nota: 8 }, { nome: "Pedro", nota: 9 }]
+
+let mediaNotas = estudantes.reduce((total, estudante) => total + estudante.nota, 0) / estudantes.length;
+console.log(mediaNotas); // 7.67
+```
+

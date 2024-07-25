@@ -1,0 +1,32 @@
+
+Exercício 28: Manipulação de Arrays de Objetos em JavaScript
+
+Neste exercício, você aprenderá a manipular arrays de objetos em JavaScript. Arrays de objetos são arrays que contêm objetos como elementos.
+
+Passos:
+1. Crie um array de objetos, onde cada objeto representa um produto com propriedades `nome` e `preco`.
+2. Crie uma função que receba o array de produtos como parâmetro e retorne o produto mais caro.
+3. Chame a função e exiba o resultado no console.
+
+Exemplo:
+```javascript
+let produtos = [
+    { nome: "Produto A", preco: 10 },
+    { nome: "Produto B", preco: 20 },
+    { nome: "Produto C", preco: 15 }
+];
+
+function produtoMaisCaro(produtos) {
+    let maisCaro = produtos[0];
+    for (let i = 1; i < produtos.length; i++) {
+        if (produtos[i].preco > maisCaro.preco) {
+            maisCaro = produtos[i];
+        }
+    }
+    return maisCaro;
+}
+
+let resultado = produtoMaisCaro(produtos);
+console.log(resultado); // { nome: "Produto B", preco: 20 }
+```
+

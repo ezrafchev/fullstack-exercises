@@ -1,0 +1,29 @@
+
+Exercício 39: Manipulação de Arrays de Objetos com Funções de Alta Ordem em JavaScript
+
+Neste exercício, você aprenderá a utilizar funções de alta ordem em arrays de objetos em JavaScript. Funções de alta ordem são funções que recebem outras funções como argumentos ou retornam funções como resultado.
+
+Passos:
+1. Crie um array de objetos, onde cada objeto representa um filme com propriedades `titulo` e `ano`.
+2. Utilize o método `map` para criar um novo array com apenas os títulos dos filmes.
+3. Utilize o método `filter` para criar um novo array com apenas os filmes lançados após o ano 2000.
+4. Utilize o método `reduce` para concatenar todos os títulos dos filmes em uma única string.
+
+Exemplo:
+```javascript
+let filmes = [
+    { titulo: "Matrix", ano: 1999 },
+    { titulo: "Inception", ano: 2010 },
+    { titulo: "Interstellar", ano: 2014 }
+];
+
+let titulos = filmes.map(filme => filme.titulo);
+console.log(titulos); // ["Matrix", "Inception", "Interstellar"]
+
+let filmesRecentes = filmes.filter(filme => filme.ano > 2000);
+console.log(filmesRecentes); // [{ titulo: "Inception", ano: 2010 }, { titulo: "Interstellar", ano: 2014 }]
+
+let todosTitulos = titulos.reduce((todos, titulo) => todos + ", " + titulo);
+console.log(todosTitulos); // "Matrix, Inception, Interstellar"
+```
+

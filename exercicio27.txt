@@ -1,0 +1,31 @@
+
+Exercício 27: Manipulação de Objetos Aninhados em JavaScript
+
+Neste exercício, você aprenderá a manipular objetos aninhados em JavaScript. Objetos aninhados são objetos que contêm outros objetos como propriedades.
+
+Passos:
+1. Crie um objeto que represente uma pessoa com propriedades `nome`, `idade` e `endereco`.
+2. A propriedade `endereco` deve ser um objeto com propriedades `rua`, `cidade` e `estado`.
+3. Crie uma função que receba o objeto pessoa como parâmetro e retorne uma string formatada com as informações da pessoa.
+4. Chame a função e exiba o resultado no console.
+
+Exemplo:
+```javascript
+let pessoa = {
+    nome: "João",
+    idade: 30,
+    endereco: {
+        rua: "Rua A",
+        cidade: "São Paulo",
+        estado: "SP"
+    }
+};
+
+function formatarPessoa(pessoa) {
+    return `Nome: ${pessoa.nome}, Idade: ${pessoa.idade}, Endereço: ${pessoa.endereco.rua}, ${pessoa.endereco.cidade} - ${pessoa.endereco.estado}`;
+}
+
+let resultado = formatarPessoa(pessoa);
+console.log(resultado); // Nome: João, Idade: 30, Endereço: Rua A, São Paulo - SP
+```
+

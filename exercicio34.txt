@@ -1,0 +1,29 @@
+
+Exercício 34: Manipulação de Arrays de Objetos com Funções de Alta Ordem em JavaScript
+
+Neste exercício, você aprenderá a utilizar funções de alta ordem em arrays de objetos em JavaScript. Funções de alta ordem são funções que recebem outras funções como argumentos ou retornam funções como resultado.
+
+Passos:
+1. Crie um array de objetos, onde cada objeto representa um produto com propriedades `nome` e `preco`.
+2. Utilize o método `map` para criar um novo array com apenas os nomes dos produtos.
+3. Utilize o método `filter` para criar um novo array com apenas os produtos que têm preço maior que 50.
+4. Utilize o método `reduce` para calcular a soma dos preços dos produtos.
+
+Exemplo:
+```javascript
+let produtos = [
+    { nome: "Produto A", preco: 30 },
+    { nome: "Produto B", preco: 60 },
+    { nome: "Produto C", preco: 90 }
+];
+
+let nomes = produtos.map(produto => produto.nome);
+console.log(nomes); // ["Produto A", "Produto B", "Produto C"]
+
+let produtosCaros = produtos.filter(produto => produto.preco > 50);
+console.log(produtosCaros); // [{ nome: "Produto B", preco: 60 }, { nome: "Produto C", preco: 90 }]
+
+let somaPrecos = produtos.reduce((total, produto) => total + produto.preco, 0);
+console.log(somaPrecos); // 180
+```
+

@@ -1,0 +1,22 @@
+
+Exercício 21: Manipulação de Data e Hora em JavaScript
+
+Neste exercício, você aprenderá a manipular datas e horas em JavaScript. Você pode criar, formatar e manipular objetos de data e hora usando a classe `Date`.
+
+Passos:
+1. Crie uma função que retorne a data e hora atual.
+2. Formate a data e hora em uma string legível.
+3. Exiba a data e hora formatada no console.
+
+Exemplo:
+```javascript
+function obterDataHoraAtual() {
+    let agora = new Date();
+    let dataFormatada = agora.toLocaleString();
+    return dataFormatada;
+}
+
+let dataHoraAtual = obterDataHoraAtual();
+console.log("Data e Hora Atual: " + dataHoraAtual);
+```
+

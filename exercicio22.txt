@@ -1,0 +1,27 @@
+
+Exercício 22: Temporizadores em JavaScript
+
+Neste exercício, você aprenderá a utilizar temporizadores em JavaScript. Você pode usar `setTimeout` e `setInterval` para executar funções após um determinado tempo ou em intervalos regulares.
+
+Passos:
+1. Crie uma função que exiba uma mensagem no console após 3 segundos usando `setTimeout`.
+2. Crie uma função que exiba uma mensagem no console a cada 2 segundos usando `setInterval`.
+
+Exemplo:
+```javascript
+function mensagemApos3Segundos() {
+    setTimeout(() => {
+        console.log("Esta mensagem aparece após 3 segundos.");
+    }, 3000);
+}
+
+function mensagemACada2Segundos() {
+    setInterval(() => {
+        console.log("Esta mensagem aparece a cada 2 segundos.");
+    }, 2000);
+}
+
+mensagemApos3Segundos();
+mensagemACada2Segundos();
+```
+

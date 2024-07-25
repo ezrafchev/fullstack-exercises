@@ -1,0 +1,25 @@
+
+Exercício 23: Manipulação de Arrays com Métodos de Alta Ordem em JavaScript
+
+Neste exercício, você aprenderá a utilizar métodos de alta ordem em arrays em JavaScript. Métodos de alta ordem são funções que recebem outras funções como argumentos ou retornam funções como resultado.
+
+Passos:
+1. Crie um array com cinco números.
+2. Utilize o método `map` para criar um novo array com o dobro dos valores do array original.
+3. Utilize o método `filter` para criar um novo array com apenas os valores maiores que 10.
+4. Utilize o método `reduce` para calcular a soma de todos os valores do array.
+
+Exemplo:
+```javascript
+let numeros = [5, 10, 15, 20, 25];
+
+let dobro = numeros.map(num => num * 2);
+console.log(dobro); // [10, 20, 30, 40, 50]
+
+let maioresQueDez = numeros.filter(num => num > 10);
+console.log(maioresQueDez); // [15, 20, 25]
+
+let soma = numeros.reduce((total, num) => total + num, 0);
+console.log(soma); // 75
+```
+
