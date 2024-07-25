@@ -1,5 +1,8 @@
 
+
 # Fullstack Exercises
+
+![Fullstack Exercises](https://via.placeholder.com/800x200.png?text=Fullstack+Exercises)
 
 Este projeto contém 50 exercícios educacionais para programadores fullstack, com uma paleta de cores e design inspirados no tema escuro moderno do VSCode.
 
@@ -12,16 +15,16 @@ Este projeto contém 50 exercícios educacionais para programadores fullstack, c
 
 1. Clone o repositório:
 
-```bash
-git clone https://github.com/ezrafchev/fullstack-exercises.git
-cd fullstack-exercises
-```
+    ```bash
+    git clone https://github.com/ezrafchev/fullstack-exercises.git
+    cd fullstack-exercises
+    ```
 
 2. Instale as dependências:
 
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
 ## Executando o Projeto
 
