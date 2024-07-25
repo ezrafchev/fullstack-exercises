@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11 - Paginação na Listagem de Usuários</title>
+    <script>
+        let currentPage = 1;
+        const usersPerPage = 5;
+
+        async function fetchUsers(page) {
+            const response = await fetch(`http://localhost:5000/users?page=${page}&limit=${usersPerPage}`, {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const users = await response.json();
+            const userList = document.getElementById('user-list');
+            userList.innerHTML = '';
+            users.forEach(user => {
+                const li = document.createElement('li');
+                li.textContent = `Nome: ${user.name}, Email: ${user.email}`;
+                userList.appendChild(li);
+            });
+        }
+
+        function nextPage() {
+            currentPage++;
+            fetchUsers(currentPage);
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                fetchUsers(currentPage);
+            }
+        }
+
+        window.onload = () => fetchUsers(currentPage);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Listagem de Usuários</h1>
+    </header>
+    <main>
+        <ul id="user-list"></ul>
+        <button onclick="prevPage()">Anterior</button>
+        <button onclick="nextPage()">Próximo</button>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+

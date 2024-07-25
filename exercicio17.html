@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 17 - Detalhes do Produto</title>
+    <script>
+        async function fetchProductDetails(productId) {
+            const response = await fetch(`http://localhost:5000/products/${productId}`, {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const product = await response.json();
+            document.getElementById('product-name').textContent = `Nome: ${product.name}`;
+            document.getElementById('product-description').textContent = `Descrição: ${product.description}`;
+            document.getElementById('product-price').textContent = `Preço: ${product.price}`;
+        }
+
+        window.onload = () => {
+            const productId = new URLSearchParams(window.location.search).get('id');
+            fetchProductDetails(productId);
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Detalhes do Produto</h1>
+    </header>
+    <main>
+        <div>
+            <p id="product-name"></p>
+            <p id="product-description"></p>
+            <p id="product-price"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+

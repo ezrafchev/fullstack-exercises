@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 19 - Carrinho de Compras</title>
+    <script>
+        let cart = [];
+
+        async function fetchProducts() {
+            const response = await fetch('http://localhost:5000/products', {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const products = await response.json();
+            const productList = document.getElementById('product-list');
+            products.forEach(product => {
+                const li = document.createElement('li');
+                li.textContent = `Nome: ${product.name}, Preço: ${product.price}`;
+                const addButton = document.createElement('button');
+                addButton.textContent = 'Adicionar ao Carrinho';
+                addButton.onclick = () => addToCart(product);
+                li.appendChild(addButton);
+                productList.appendChild(li);
+            });
+        }
+
+        function addToCart(product) {
+            cart.push(product);
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartList = document.getElementById('cart-list');
+            cartList.innerHTML = '';
+            cart.forEach((product, index) => {
+                const li = document.createElement('li');
+                li.textContent = `Nome: ${product.name}, Preço: ${product.price}`;
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remover';
+                removeButton.onclick = () => removeFromCart(index);
+                li.appendChild(removeButton);
+                cartList.appendChild(li);
+            });
+        }
+
+        window.onload = fetchProducts;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Carrinho de Compras</h1>
+    </header>
+    <main>
+        <h2>Produtos</h2>
+        <ul id="product-list"></ul>
+        <h2>Carrinho</h2>
+        <ul id="cart-list"></ul>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+

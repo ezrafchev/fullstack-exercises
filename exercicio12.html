@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12 - Detalhes do Usuário</title>
+    <script>
+        async function fetchUserDetails(userId) {
+            const response = await fetch(`http://localhost:5000/users/${userId}`, {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const user = await response.json();
+            document.getElementById('user-name').textContent = `Nome: ${user.name}`;
+            document.getElementById('user-email').textContent = `Email: ${user.email}`;
+            document.getElementById('user-registered').textContent = `Data de Cadastro: ${user.registered}`;
+        }
+
+        window.onload = () => {
+            const userId = new URLSearchParams(window.location.search).get('id');
+            fetchUserDetails(userId);
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Detalhes do Usuário</h1>
+    </header>
+    <main>
+        <div>
+            <p id="user-name"></p>
+            <p id="user-email"></p>
+            <p id="user-registered"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+
