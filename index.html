@@ -13,57 +13,208 @@
         <!-- Exercícios serão inseridos aqui -->
     </div>
     <script>
+
         const exercises = [
-            "Crie uma página HTML simples com um cabeçalho, parágrafo e rodapé.",
-            "Estilize a página HTML usando CSS para aplicar cores, fontes e layout.",
-            "Crie um formulário de login com campos para nome de usuário e senha.",
-            "Valide o formulário de login usando JavaScript.",
-            "Crie uma página de cadastro de usuário com campos para nome, email e senha.",
-            "Valide o formulário de cadastro usando JavaScript.",
-            "Crie uma página de perfil de usuário que exiba as informações do usuário.",
-            "Crie uma API RESTful para gerenciar usuários (CRUD).",
-            "Implemente autenticação JWT na API de usuários.",
-            "Crie uma página de listagem de usuários que consuma a API de usuários.",
-            "Implemente paginação na listagem de usuários.",
-            "Crie uma página de detalhes do usuário que exiba informações detalhadas de um usuário.",
-            "Implemente a edição de perfil de usuário na página de detalhes do usuário.",
-            "Crie uma página de listagem de produtos com nome, descrição e preço.",
-            "Crie uma API RESTful para gerenciar produtos (CRUD).",
-            "Implemente autenticação JWT na API de produtos.",
-            "Crie uma página de detalhes do produto que exiba informações detalhadas de um produto.",
-            "Implemente a edição de produto na página de detalhes do produto.",
-            "Crie uma página de carrinho de compras que permita adicionar e remover produtos.",
-            "Implemente a funcionalidade de checkout no carrinho de compras.",
-            "Crie uma página de histórico de pedidos que exiba os pedidos do usuário.",
-            "Crie uma API RESTful para gerenciar pedidos (CRUD).",
-            "Implemente autenticação JWT na API de pedidos.",
-            "Crie uma página de detalhes do pedido que exiba informações detalhadas de um pedido.",
-            "Implemente a edição de pedido na página de detalhes do pedido.",
-            "Crie uma página de listagem de categorias de produtos.",
-            "Crie uma API RESTful para gerenciar categorias de produtos (CRUD).",
-            "Implemente autenticação JWT na API de categorias de produtos.",
-            "Crie uma página de detalhes da categoria que exiba informações detalhadas de uma categoria.",
-            "Implemente a edição de categoria na página de detalhes da categoria.",
-            "Crie uma página de listagem de comentários de produtos.",
-            "Crie uma API RESTful para gerenciar comentários de produtos (CRUD).",
-            "Implemente autenticação JWT na API de comentários de produtos.",
-            "Crie uma página de detalhes do comentário que exiba informações detalhadas de um comentário.",
-            "Implemente a edição de comentário na página de detalhes do comentário.",
-            "Crie uma página de listagem de avaliações de produtos.",
-            "Crie uma API RESTful para gerenciar avaliações de produtos (CRUD).",
-            "Implemente autenticação JWT na API de avaliações de produtos.",
-            "Crie uma página de detalhes da avaliação que exiba informações detalhadas de uma avaliação.",
-            "Implemente a edição de avaliação na página de detalhes da avaliação.",
-            "Crie uma página de listagem de cupons de desconto.",
-            "Crie uma API RESTful para gerenciar cupons de desconto (CRUD).",
-            "Implemente autenticação JWT na API de cupons de desconto.",
-            "Crie uma página de detalhes do cupom que exiba informações detalhadas de um cupom.",
-            "Implemente a edição de cupom na página de detalhes do cupom.",
-            "Crie uma página de listagem de endereços de entrega.",
-            "Crie uma API RESTful para gerenciar endereços de entrega (CRUD).",
-            "Implemente autenticação JWT na API de endereços de entrega.",
-            "Crie uma página de detalhes do endereço que exiba informações detalhadas de um endereço.",
-            "Implemente a edição de endereço na página de detalhes do endereço."
+            {
+                title: "Crie uma página HTML simples com um cabeçalho, parágrafo e rodapé.",
+                content: "Crie um arquivo HTML com a estrutura básica e adicione um cabeçalho, um parágrafo e um rodapé."
+            },
+            {
+                title: "Estilize a página HTML usando CSS para aplicar cores, fontes e layout.",
+                content: "Crie um arquivo CSS e adicione estilos para o cabeçalho, parágrafo e rodapé. Aplique cores, fontes e layout."
+            },
+            {
+                title: "Crie um formulário de login com campos para nome de usuário e senha.",
+                content: "Crie um formulário HTML com campos para nome de usuário e senha. Adicione um botão de login."
+            },
+            {
+                title: "Valide o formulário de login usando JavaScript.",
+                content: "Adicione um script JavaScript para validar os campos do formulário de login. Verifique se os campos não estão vazios."
+            },
+            {
+                title: "Crie uma página de cadastro de usuário com campos para nome, email e senha.",
+                content: "Crie um formulário HTML com campos para nome, email e senha. Adicione um botão de cadastro."
+            },
+            {
+                title: "Valide o formulário de cadastro usando JavaScript.",
+                content: "Adicione um script JavaScript para validar os campos do formulário de cadastro. Verifique se os campos não estão vazios e se o email é válido."
+            },
+            {
+                title: "Crie uma página de perfil de usuário que exiba as informações do usuário.",
+                content: "Crie uma página HTML que exiba as informações do usuário, como nome, email e foto de perfil."
+            },
+            {
+                title: "Crie uma API RESTful para gerenciar usuários (CRUD).",
+                content: "Crie uma API RESTful usando Node.js e Express para gerenciar usuários. Implemente as operações de criação, leitura, atualização e exclusão (CRUD)."
+            },
+            {
+                title: "Implemente autenticação JWT na API de usuários.",
+                content: "Adicione autenticação JWT à API de usuários. Gere tokens JWT ao fazer login e verifique os tokens em rotas protegidas."
+            },
+            {
+                title: "Crie uma página de listagem de usuários que consuma a API de usuários.",
+                content: "Crie uma página HTML que exiba uma lista de usuários. Consuma a API de usuários para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Implemente paginação na listagem de usuários.",
+                content: "Adicione paginação à listagem de usuários. Divida a lista de usuários em páginas e adicione botões para navegar entre as páginas."
+            },
+            {
+                title: "Crie uma página de detalhes do usuário que exiba informações detalhadas de um usuário.",
+                content: "Crie uma página HTML que exiba informações detalhadas de um usuário. Consuma a API de usuários para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Implemente a edição de perfil de usuário na página de detalhes do usuário.",
+                content: "Adicione um formulário de edição na página de detalhes do usuário. Permita que o usuário edite suas informações e envie as alterações para a API."
+            },
+            {
+                title: "Crie uma página de listagem de produtos com nome, descrição e preço.",
+                content: "Crie uma página HTML que exiba uma lista de produtos com nome, descrição e preço. Consuma a API de produtos para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Crie uma API RESTful para gerenciar produtos (CRUD).",
+                content: "Crie uma API RESTful usando Node.js e Express para gerenciar produtos. Implemente as operações de criação, leitura, atualização e exclusão (CRUD)."
+            },
+            {
+                title: "Implemente autenticação JWT na API de produtos.",
+                content: "Adicione autenticação JWT à API de produtos. Gere tokens JWT ao fazer login e verifique os tokens em rotas protegidas."
+            },
+            {
+                title: "Crie uma página de detalhes do produto que exiba informações detalhadas de um produto.",
+                content: "Crie uma página HTML que exiba informações detalhadas de um produto. Consuma a API de produtos para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Implemente a edição de produto na página de detalhes do produto.",
+                content: "Adicione um formulário de edição na página de detalhes do produto. Permita que o usuário edite as informações do produto e envie as alterações para a API."
+            },
+            {
+                title: "Crie uma página de carrinho de compras que permita adicionar e remover produtos.",
+                content: "Crie uma página HTML que exiba um carrinho de compras. Permita que o usuário adicione e remova produtos do carrinho."
+            },
+            {
+                title: "Implemente a funcionalidade de checkout no carrinho de compras.",
+                content: "Adicione um botão de checkout no carrinho de compras. Permita que o usuário finalize a compra e envie os dados para a API de pedidos."
+            },
+            {
+                title: "Crie uma página de histórico de pedidos que exiba os pedidos do usuário.",
+                content: "Crie uma página HTML que exiba o histórico de pedidos do usuário. Consuma a API de pedidos para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Crie uma API RESTful para gerenciar pedidos (CRUD).",
+                content: "Crie uma API RESTful usando Node.js e Express para gerenciar pedidos. Implemente as operações de criação, leitura, atualização e exclusão (CRUD)."
+            },
+            {
+                title: "Implemente autenticação JWT na API de pedidos.",
+                content: "Adicione autenticação JWT à API de pedidos. Gere tokens JWT ao fazer login e verifique os tokens em rotas protegidas."
+            },
+            {
+                title: "Crie uma página de detalhes do pedido que exiba informações detalhadas de um pedido.",
+                content: "Crie uma página HTML que exiba informações detalhadas de um pedido. Consuma a API de pedidos para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Implemente a edição de pedido na página de detalhes do pedido.",
+                content: "Adicione um formulário de edição na página de detalhes do pedido. Permita que o usuário edite as informações do pedido e envie as alterações para a API."
+            },
+            {
+                title: "Crie uma página de listagem de categorias de produtos.",
+                content: "Crie uma página HTML que exiba uma lista de categorias de produtos. Consuma a API de categorias de produtos para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Crie uma API RESTful para gerenciar categorias de produtos (CRUD).",
+                content: "Crie uma API RESTful usando Node.js e Express para gerenciar categorias de produtos. Implemente as operações de criação, leitura, atualização e exclusão (CRUD)."
+            },
+            {
+                title: "Implemente autenticação JWT na API de categorias de produtos.",
+                content: "Adicione autenticação JWT à API de categorias de produtos. Gere tokens JWT ao fazer login e verifique os tokens em rotas protegidas."
+            },
+            {
+                title: "Crie uma página de detalhes da categoria que exiba informações detalhadas de uma categoria.",
+                content: "Crie uma página HTML que exiba informações detalhadas de uma categoria. Consuma a API de categorias de produtos para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Implemente a edição de categoria na página de detalhes da categoria.",
+                content: "Adicione um formulário de edição na página de detalhes da categoria. Permita que o usuário edite as informações da categoria e envie as alterações para a API."
+            },
+            {
+                title: "Crie uma página de listagem de comentários de produtos.",
+                content: "Crie uma página HTML que exiba uma lista de comentários de produtos. Consuma a API de comentários de produtos para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Crie uma API RESTful para gerenciar comentários de produtos (CRUD).",
+                content: "Crie uma API RESTful usando Node.js e Express para gerenciar comentários de produtos. Implemente as operações de criação, leitura, atualização e exclusão (CRUD)."
+            },
+            {
+                title: "Implemente autenticação JWT na API de comentários de produtos.",
+                content: "Adicione autenticação JWT à API de comentários de produtos. Gere tokens JWT ao fazer login e verifique os tokens em rotas protegidas."
+            },
+            {
+                title: "Crie uma página de detalhes do comentário que exiba informações detalhadas de um comentário.",
+                content: "Crie uma página HTML que exiba informações detalhadas de um comentário. Consuma a API de comentários de produtos para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Implemente a edição de comentário na página de detalhes do comentário.",
+                content: "Adicione um formulário de edição na página de detalhes do comentário. Permita que o usuário edite as informações do comentário e envie as alterações para a API."
+            },
+            {
+                title: "Crie uma página de listagem de avaliações de produtos.",
+                content: "Crie uma página HTML que exiba uma lista de avaliações de produtos. Consuma a API de avaliações de produtos para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Crie uma API RESTful para gerenciar avaliações de produtos (CRUD).",
+                content: "Crie uma API RESTful usando Node.js e Express para gerenciar avaliações de produtos. Implemente as operações de criação, leitura, atualização e exclusão (CRUD)."
+            },
+            {
+                title: "Implemente autenticação JWT na API de avaliações de produtos.",
+                content: "Adicione autenticação JWT à API de avaliações de produtos. Gere tokens JWT ao fazer login e verifique os tokens em rotas protegidas."
+            },
+            {
+                title: "Crie uma página de detalhes da avaliação que exiba informações detalhadas de uma avaliação.",
+                content: "Crie uma página HTML que exiba informações detalhadas de uma avaliação. Consuma a API de avaliações de produtos para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Implemente a edição de avaliação na página de detalhes da avaliação.",
+                content: "Adicione um formulário de edição na página de detalhes da avaliação. Permita que o usuário edite as informações da avaliação e envie as alterações para a API."
+            },
+            {
+                title: "Crie uma página de listagem de cupons de desconto.",
+                content: "Crie uma página HTML que exiba uma lista de cupons de desconto. Consuma a API de cupons de desconto para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Crie uma API RESTful para gerenciar cupons de desconto (CRUD).",
+                content: "Crie uma API RESTful usando Node.js e Express para gerenciar cupons de desconto. Implemente as operações de criação, leitura, atualização e exclusão (CRUD)."
+            },
+            {
+                title: "Implemente autenticação JWT na API de cupons de desconto.",
+                content: "Adicione autenticação JWT à API de cupons de desconto. Gere tokens JWT ao fazer login e verifique os tokens em rotas protegidas."
+            },
+            {
+                title: "Crie uma página de detalhes do cupom que exiba informações detalhadas de um cupom.",
+                content: "Crie uma página HTML que exiba informações detalhadas de um cupom. Consuma a API de cupons de desconto para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Implemente a edição de cupom na página de detalhes do cupom.",
+                content: "Adicione um formulário de edição na página de detalhes do cupom. Permita que o usuário edite as informações do cupom e envie as alterações para a API."
+            },
+            {
+                title: "Crie uma página de listagem de endereços de entrega.",
+                content: "Crie uma página HTML que exiba uma lista de endereços de entrega. Consuma a API de endereços de entrega para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Crie uma API RESTful para gerenciar endereços de entrega (CRUD).",
+                content: "Crie uma API RESTful usando Node.js e Express para gerenciar endereços de entrega. Implemente as operações de criação, leitura, atualização e exclusão (CRUD)."
+            },
+            {
+                title: "Implemente autenticação JWT na API de endereços de entrega.",
+                content: "Adicione autenticação JWT à API de endereços de entrega. Gere tokens JWT ao fazer login e verifique os tokens em rotas protegidas."
+            },
+            {
+                title: "Crie uma página de detalhes do endereço que exiba informações detalhadas de um endereço.",
+                content: "Crie uma página HTML que exiba informações detalhadas de um endereço. Consuma a API de endereços de entrega para obter os dados e exibi-los na página."
+            },
+            {
+                title: "Implemente a edição de endereço na página de detalhes do endereço.",
+                content: "Adicione um formulário de edição na página de detalhes do endereço. Permita que o usuário edite as informações do endereço e envie as alterações para a API."
+            }
         ];
 
         const exercisesContainer = document.getElementById('exercises');
