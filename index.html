@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Fullstack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Exercícios Educacionais para Programadores Fullstack</h1>
+    <div id="exercises">
+        <!-- Exercícios serão inseridos aqui -->
+    </div>
+    <script>
+        const exercises = [
+            "Crie uma página HTML simples com um cabeçalho, parágrafo e rodapé.",
+            "Estilize a página HTML usando CSS para aplicar cores, fontes e layout.",
+            "Crie um formulário de login com campos para nome de usuário e senha.",
+            "Valide o formulário de login usando JavaScript.",
+            "Crie uma página de cadastro de usuário com campos para nome, email e senha.",
+            "Valide o formulário de cadastro usando JavaScript.",
+            "Crie uma página de perfil de usuário que exiba as informações do usuário.",
+            "Crie uma API RESTful para gerenciar usuários (CRUD).",
+            "Implemente autenticação JWT na API de usuários.",
+            "Crie uma página de listagem de usuários que consuma a API de usuários.",
+            "Implemente paginação na listagem de usuários.",
+            "Crie uma página de detalhes do usuário que exiba informações detalhadas de um usuário.",
+            "Implemente a edição de perfil de usuário na página de detalhes do usuário.",
+            "Crie uma página de listagem de produtos com nome, descrição e preço.",
+            "Crie uma API RESTful para gerenciar produtos (CRUD).",
+            "Implemente autenticação JWT na API de produtos.",
+            "Crie uma página de detalhes do produto que exiba informações detalhadas de um produto.",
+            "Implemente a edição de produto na página de detalhes do produto.",
+            "Crie uma página de carrinho de compras que permita adicionar e remover produtos.",
+            "Implemente a funcionalidade de checkout no carrinho de compras.",
+            "Crie uma página de histórico de pedidos que exiba os pedidos do usuário.",
+            "Crie uma API RESTful para gerenciar pedidos (CRUD).",
+            "Implemente autenticação JWT na API de pedidos.",
+            "Crie uma página de detalhes do pedido que exiba informações detalhadas de um pedido.",
+            "Implemente a edição de pedido na página de detalhes do pedido.",
+            "Crie uma página de listagem de categorias de produtos.",
+            "Crie uma API RESTful para gerenciar categorias de produtos (CRUD).",
+            "Implemente autenticação JWT na API de categorias de produtos.",
+            "Crie uma página de detalhes da categoria que exiba informações detalhadas de uma categoria.",
+            "Implemente a edição de categoria na página de detalhes da categoria.",
+            "Crie uma página de listagem de comentários de produtos.",
+            "Crie uma API RESTful para gerenciar comentários de produtos (CRUD).",
+            "Implemente autenticação JWT na API de comentários de produtos.",
+            "Crie uma página de detalhes do comentário que exiba informações detalhadas de um comentário.",
+            "Implemente a edição de comentário na página de detalhes do comentário.",
+            "Crie uma página de listagem de avaliações de produtos.",
+            "Crie uma API RESTful para gerenciar avaliações de produtos (CRUD).",
+            "Implemente autenticação JWT na API de avaliações de produtos.",
+            "Crie uma página de detalhes da avaliação que exiba informações detalhadas de uma avaliação.",
+            "Implemente a edição de avaliação na página de detalhes da avaliação.",
+            "Crie uma página de listagem de cupons de desconto.",
+            "Crie uma API RESTful para gerenciar cupons de desconto (CRUD).",
+            "Implemente autenticação JWT na API de cupons de desconto.",
+            "Crie uma página de detalhes do cupom que exiba informações detalhadas de um cupom.",
+            "Implemente a edição de cupom na página de detalhes do cupom.",
+            "Crie uma página de listagem de endereços de entrega.",
+            "Crie uma API RESTful para gerenciar endereços de entrega (CRUD).",
+            "Implemente autenticação JWT na API de endereços de entrega.",
+            "Crie uma página de detalhes do endereço que exiba informações detalhadas de um endereço.",
+            "Implemente a edição de endereço na página de detalhes do endereço."
+        ];
+
+        const exercisesContainer = document.getElementById('exercises');
+        exercises.forEach((exercise, index) => {
+            const exerciseElement = document.createElement('div');
+            exerciseElement.className = 'exercise';
+            exerciseElement.innerHTML = `<strong>Exercício ${index + 1}:</strong> ${exercise}`;
+            exercisesContainer.appendChild(exerciseElement);
+        });
+    </script>
+</body>
+</html>
+
