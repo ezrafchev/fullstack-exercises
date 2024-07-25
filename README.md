@@ -4,7 +4,7 @@
 
 # Fullstack Exercises
 
-![Fullstack Exercises](https://via.placeholder.com/800x200.png?text=Fullstack+Exercises)
+![Fullstack Exercises](https://via.placeholder.com/800x200/000000/FFFFFF/?text=Fullstack+Exercises)
 
 Este projeto contém 50 exercícios educacionais para programadores fullstack, com uma paleta de cores e design inspirados no tema escuro moderno do VSCode.
 
