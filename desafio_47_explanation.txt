@@ -1,0 +1,20 @@
+
+# Desafio 47: Criar uma API RESTful para gerenciar endereços de entrega (CRUD)
+
+## Objetivo
+O objetivo deste desafio é criar uma API RESTful que permita criar, ler, atualizar e excluir endereços de entrega.
+
+## Instruções
+1. Crie um arquivo Python chamado `api_enderecos.py`.
+2. Utilize o framework Flask para criar a API.
+3. Implemente as operações CRUD (Create, Read, Update, Delete) para os endereços de entrega.
+
+## Explicação
+- O código Python deve criar uma API RESTful usando o framework Flask.
+- A API deve permitir listar todos os endereços, obter um endereço pelo ID, criar um novo endereço, atualizar um endereço existente e excluir um endereço.
+- Os dados dos endereços devem ser armazenados em uma lista de dicionários para fins de exemplo.
+
+## Tarefa
+- Modifique o código de exemplo para adicionar mais funcionalidades ou melhorar a API conforme necessário.
+- Teste a API usando uma ferramenta como Postman ou cURL.
+

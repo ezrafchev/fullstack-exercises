@@ -1,0 +1,19 @@
+
+# Desafio 49: Criar uma página de detalhes do endereço que exibe informações detalhadas sobre um endereço
+
+## Objetivo
+O objetivo deste desafio é criar uma página web que exiba informações detalhadas sobre um endereço de entrega.
+
+## Instruções
+1. Crie um arquivo HTML chamado `detalhes_endereco.html`.
+2. Adicione uma seção na página HTML para exibir as informações detalhadas do endereço.
+3. Preencha a seção com dados de exemplo.
+
+## Explicação
+- A página HTML deve exibir informações detalhadas sobre um endereço de entrega, como nome do destinatário, endereço, cidade, estado e CEP.
+- Você pode estilizar a página conforme sua preferência.
+
+## Tarefa
+- Modifique o código de exemplo para adicionar mais informações sobre o endereço.
+- Estilize a página conforme sua preferência.
+

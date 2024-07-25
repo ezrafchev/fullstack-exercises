@@ -1,0 +1,19 @@
+
+# Desafio 45: Implementar edição de cupons na página de detalhes do cupom
+
+## Objetivo
+O objetivo deste desafio é implementar a funcionalidade de edição de cupons na página de detalhes do cupom.
+
+## Instruções
+1. Crie um arquivo HTML chamado `editar_cupom.html`.
+2. Adicione um formulário na página HTML para permitir a edição das informações do cupom.
+3. Preencha o formulário com dados de exemplo.
+
+## Explicação
+- A página HTML deve conter um formulário que permita a edição das informações do cupom, como código do cupom, descrição, valor do desconto e data de validade.
+- Você pode estilizar a página conforme sua preferência.
+
+## Tarefa
+- Modifique o código de exemplo para adicionar mais campos de edição, se necessário.
+- Estilize a página conforme sua preferência.
+

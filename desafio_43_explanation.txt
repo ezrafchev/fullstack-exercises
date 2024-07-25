@@ -1,0 +1,20 @@
+
+# Desafio 43: Implementar autenticação JWT na API de cupons de desconto
+
+## Objetivo
+O objetivo deste desafio é implementar autenticação JWT (JSON Web Token) na API de cupons de desconto criada no desafio anterior.
+
+## Instruções
+1. Crie um arquivo Python chamado `api_cupons_jwt.py`.
+2. Utilize o framework Flask e a biblioteca PyJWT para implementar a autenticação JWT.
+3. Proteja as rotas da API para que apenas usuários autenticados possam acessar.
+
+## Explicação
+- A autenticação JWT é um método de autenticação que utiliza tokens JSON Web Token.
+- Os tokens JWT são gerados no momento do login e devem ser enviados no cabeçalho das requisições para acessar as rotas protegidas da API.
+- A biblioteca PyJWT é utilizada para gerar e validar os tokens JWT.
+
+## Tarefa
+- Modifique o código de exemplo para adicionar autenticação JWT na API de cupons de desconto.
+- Teste a API usando uma ferramenta como Postman ou cURL.
+

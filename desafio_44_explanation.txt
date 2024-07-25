@@ -1,0 +1,19 @@
+
+# Desafio 44: Criar uma página de detalhes do cupom que exibe informações detalhadas sobre um cupom
+
+## Objetivo
+O objetivo deste desafio é criar uma página web que exiba informações detalhadas sobre um cupom de desconto.
+
+## Instruções
+1. Crie um arquivo HTML chamado `detalhes_cupom.html`.
+2. Adicione uma seção na página HTML para exibir as informações detalhadas do cupom.
+3. Preencha a seção com dados de exemplo.
+
+## Explicação
+- A página HTML deve exibir informações detalhadas sobre um cupom de desconto, como código do cupom, descrição, valor do desconto e data de validade.
+- Você pode estilizar a página conforme sua preferência.
+
+## Tarefa
+- Modifique o código de exemplo para adicionar mais informações sobre o cupom.
+- Estilize a página conforme sua preferência.
+

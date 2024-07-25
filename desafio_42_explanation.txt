@@ -1,0 +1,20 @@
+
+# Desafio 42: Criar uma API RESTful para gerenciar cupons de desconto (CRUD)
+
+## Objetivo
+O objetivo deste desafio é criar uma API RESTful que permita criar, ler, atualizar e excluir cupons de desconto.
+
+## Instruções
+1. Crie um arquivo Python chamado `api_cupons.py`.
+2. Utilize o framework Flask para criar a API.
+3. Implemente as operações CRUD (Create, Read, Update, Delete) para os cupons de desconto.
+
+## Explicação
+- O código Python cria uma API RESTful usando o framework Flask.
+- A API permite listar todos os cupons, obter um cupom pelo ID, criar um novo cupom, atualizar um cupom existente e excluir um cupom.
+- Os dados dos cupons são armazenados em uma lista de dicionários para fins de exemplo.
+
+## Tarefa
+- Modifique o código de exemplo para adicionar mais funcionalidades ou melhorar a API conforme necessário.
+- Teste a API usando uma ferramenta como Postman ou cURL.
+

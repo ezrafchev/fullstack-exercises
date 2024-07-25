@@ -1,0 +1,19 @@
+
+# Desafio 50: Implementar edição de endereços na página de detalhes do endereço
+
+## Objetivo
+O objetivo deste desafio é implementar a funcionalidade de edição de endereços na página de detalhes do endereço.
+
+## Instruções
+1. Crie um arquivo HTML chamado `editar_endereco.html`.
+2. Adicione um formulário na página HTML para permitir a edição das informações do endereço.
+3. Preencha o formulário com dados de exemplo.
+
+## Explicação
+- A página HTML deve conter um formulário que permita a edição das informações do endereço, como nome do destinatário, endereço, cidade, estado e CEP.
+- Você pode estilizar a página conforme sua preferência.
+
+## Tarefa
+- Modifique o código de exemplo para adicionar mais campos de edição, se necessário.
+- Estilize a página conforme sua preferência.
+

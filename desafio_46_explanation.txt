@@ -1,0 +1,20 @@
+
+# Desafio 46: Criar uma página de listagem de endereços de entrega
+
+## Objetivo
+O objetivo deste desafio é criar uma página web que liste endereços de entrega. Esta página deve exibir uma lista de endereços com informações como nome do destinatário, endereço, cidade, estado e CEP.
+
+## Instruções
+1. Crie um arquivo HTML chamado `enderecos.html`.
+2. Adicione uma tabela na página HTML para exibir os endereços de entrega.
+3. Preencha a tabela com dados de exemplo.
+
+## Explicação
+- O código HTML deve criar uma página web simples que liste endereços de entrega em uma tabela.
+- A tabela deve conter colunas para o nome do destinatário, endereço, cidade, estado e CEP.
+- Você pode adicionar mais endereços na tabela conforme necessário.
+
+## Tarefa
+- Modifique o código de exemplo para adicionar mais endereços de entrega.
+- Estilize a página conforme sua preferência.
+
