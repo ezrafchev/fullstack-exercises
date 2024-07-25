@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 26 - Listagem de Categorias de Produtos</title>
+    <script>
+        async function fetchCategories() {
+            const response = await fetch('http://localhost:5000/categories', {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const categories = await response.json();
+            const categoryList = document.getElementById('category-list');
+            categories.forEach(category => {
+                const li = document.createElement('li');
+                li.textContent = `Nome: ${category.name}, Descrição: ${category.description}`;
+                categoryList.appendChild(li);
+            });
+        }
+
+        window.onload = fetchCategories;
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Listagem de Categorias de Produtos</h1>
+    </header>
+    <main>
+        <ul id="category-list"></ul>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+

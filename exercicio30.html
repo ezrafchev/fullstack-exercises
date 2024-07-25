@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 30 - Edição de Categoria</title>
+    <script>
+        async function fetchCategoryDetails(categoryId) {
+            const response = await fetch(`http://localhost:5000/categories/${categoryId}`, {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const category = await response.json();
+            document.getElementById('name').value = category.name;
+            document.getElementById('description').value = category.description;
+        }
+
+        async function updateCategoryDetails(categoryId) {
+            const name = document.getElementById('name').value;
+            const description = document.getElementById('description').value;
+            const response = await fetch(`http://localhost:5000/categories/${categoryId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                },
+                body: JSON.stringify({ name, description })
+            });
+            if (response.ok) {
+                alert('Categoria atualizada com sucesso!');
+            } else {
+                alert('Erro ao atualizar categoria.');
+            }
+        }
+
+        window.onload = () => {
+            const categoryId = new URLSearchParams(window.location.search).get('id');
+            fetchCategoryDetails(categoryId);
+            document.getElementById('update-button').onclick = () => updateCategoryDetails(categoryId);
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Editar Categoria</h1>
+    </header>
+    <main>
+        <form>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="description">Descrição:</label>
+            <input type="text" id="description" name="description" required>
+            <br>
+            <button type="button" id="update-button">Atualizar</button>
+        </form>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+

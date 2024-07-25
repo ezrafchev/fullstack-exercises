@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 29 - Detalhes da Categoria</title>
+    <script>
+        async function fetchCategoryDetails(categoryId) {
+            const response = await fetch(`http://localhost:5000/categories/${categoryId}`, {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const category = await response.json();
+            document.getElementById('category-name').textContent = `Nome: ${category.name}`;
+            document.getElementById('category-description').textContent = `Descrição: ${category.description}`;
+        }
+
+        window.onload = () => {
+            const categoryId = new URLSearchParams(window.location.search).get('id');
+            fetchCategoryDetails(categoryId);
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Detalhes da Categoria</h1>
+    </header>
+    <main>
+        <div>
+            <p id="category-name"></p>
+            <p id="category-description"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+

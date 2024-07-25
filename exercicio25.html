@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 25 - Edição de Pedido</title>
+    <script>
+        async function fetchOrderDetails(orderId) {
+            const response = await fetch(`http://localhost:5000/orders/${orderId}`, {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const order = await response.json();
+            document.getElementById('date').value = order.date;
+            document.getElementById('total').value = order.total;
+            document.getElementById('items').value = order.items.join(', ');
+        }
+
+        async function updateOrderDetails(orderId) {
+            const date = document.getElementById('date').value;
+            const total = document.getElementById('total').value;
+            const items = document.getElementById('items').value.split(',').map(item => item.trim());
+            const response = await fetch(`http://localhost:5000/orders/${orderId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                },
+                body: JSON.stringify({ date, total, items })
+            });
+            if (response.ok) {
+                alert('Pedido atualizado com sucesso!');
+            } else {
+                alert('Erro ao atualizar pedido.');
+            }
+        }
+
+        window.onload = () => {
+            const orderId = new URLSearchParams(window.location.search).get('id');
+            fetchOrderDetails(orderId);
+            document.getElementById('update-button').onclick = () => updateOrderDetails(orderId);
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Editar Pedido</h1>
+    </header>
+    <main>
+        <form>
+            <label for="date">Data:</label>
+            <input type="text" id="date" name="date" required>
+            <br>
+            <label for="total">Total:</label>
+            <input type="number" id="total" name="total" required>
+            <br>
+            <label for="items">Itens:</label>
+            <input type="text" id="items" name="items" required>
+            <br>
+            <button type="button" id="update-button">Atualizar</button>
+        </form>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+

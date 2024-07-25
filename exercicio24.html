@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 24 - Detalhes do Pedido</title>
+    <script>
+        async function fetchOrderDetails(orderId) {
+            const response = await fetch(`http://localhost:5000/orders/${orderId}`, {
+                headers: {
+                    'x-access-token': 'YOUR_JWT_TOKEN'
+                }
+            });
+            const order = await response.json();
+            document.getElementById('order-id').textContent = `Pedido ID: ${order.id}`;
+            document.getElementById('order-date').textContent = `Data: ${order.date}`;
+            document.getElementById('order-total').textContent = `Total: ${order.total}`;
+            document.getElementById('order-items').textContent = `Itens: ${order.items.join(', ')}`;
+        }
+
+        window.onload = () => {
+            const orderId = new URLSearchParams(window.location.search).get('id');
+            fetchOrderDetails(orderId);
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Detalhes do Pedido</h1>
+    </header>
+    <main>
+        <div>
+            <p id="order-id"></p>
+            <p id="order-date"></p>
+            <p id="order-total"></p>
+            <p id="order-items"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+</body>
+</html>
+
