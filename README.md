@@ -96,7 +96,7 @@ A aplicação contém os seguintes exercícios:
 
 Você pode baixar o projeto para uso local através do seguinte link:
 
-[Download fullstack-exercises.zip](sandbox:/tmp/fullstack-exercises.zip)
+[Download fullstack-exercises.zip](https://github.com/ezrafchev/fullstack-exercises/archive/refs/heads/master.zip)
 
 ## Contribuição
 
